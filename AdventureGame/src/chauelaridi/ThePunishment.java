@@ -184,7 +184,6 @@ public class ThePunishment {
 					e.printStackTrace();
 				}
 				c.drawImage (jpgImage, 0, 100, 650, 550, null);
-
 				c.println("You have been directed to the abandon building. Legend has it that this\nlocation is haunted.");
 				c.println("You hear a loud noise and you decide to check it out.");
 				c.println("Do you want to go up the stairs or go down the hallway? (Hallway/Stairs)");
@@ -196,11 +195,12 @@ public class ThePunishment {
 					if (location1.equals("Hallway")) {
 						c.clear();
 						try {
-							jpgImage = ImageIO.read(new File("Resource/abandonedbuilding.jpg"));
+							jpgImage = ImageIO.read(new File("Resource/hallway.jpg"));
 						} catch (IOException e) {
 							System.err.println("There was an error loading the image.");
 							e.printStackTrace();
 						}
+						c.drawImage (jpgImage, 0, 100, 650, 550, null);
 						c.println("You find a teleportation.");
 						c.println("You enter and teleported back home safely.");
 					}
