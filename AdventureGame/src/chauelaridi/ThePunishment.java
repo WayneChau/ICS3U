@@ -360,7 +360,7 @@ public class ThePunishment {
 							c.println("Mother: Come over here");
 							c.println("She leads you to the ladder by removing a heavy book shelf.");
 							c.println("Mother: Jump off the abandon building to get on the boat.");
-							c.println("Rumer said that the Bermuda Triangle has a portal to another universe.");
+							c.println("Rumor said that the Bermuda Triangle has a portal to another universe.");
 							c.println("This universe holds greater potential towards a better life. Since your mother is a navigator you decide to make your escape towards the triangle.");
 						}
 					}
