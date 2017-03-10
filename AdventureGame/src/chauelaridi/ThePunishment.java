@@ -356,12 +356,12 @@ public class ThePunishment {
 							}
 							c.drawImage (jpgImage, 0, 70, c.getWidth(), 450, null);
 							c.println("You were lucky you didn't attack it. It was your mother you love so dearly.");
-							c.println("Mother: I have spent countless of years searching for you. There is an escape route that I set up.");
+							c.println("Mother: I have spent countless of years searching for you. There is an escape\nroute that I set up.");
 							c.println("Mother: Come over here.");
 							c.println("She leads you to the ladder by removing a heavy book shelf.");
 							c.println("Mother: Jump off the abandon building to get on the boat.");
 							c.println("Rumor said that the Bermuda Triangle has a portal to another universe.");
-							c.println("This universe holds greater potential towards a better life. Since your mother is a navigator you decide to make your escape towards the triangle.");
+							c.println("This universe holds greater potential towards a better life. Since your\nmother is a navigator you decide to make your escape towards the triangle.");
 						}
 					}
 				}
