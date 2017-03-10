@@ -33,13 +33,13 @@ public class ThePunishment {
 		String[] userItem = new String[3]; //Array for the items picked up
 		int counter; // Stores number for the array
 		String userItemTest; // Test the input for the array
-		BufferedImage jpgImage = null; // image
+		BufferedImage jpgImage = null; // stores image
 		c.setTextColor(Color.white);
 		c.setTextBackgroundColor(Color.black);
 		c.clear();
 		do{
 			c.clear();
-			Clip theme = null;
+			Clip theme = null; // stores audio
 			try {
 				//music theme for whole game
 				theme = AudioSystem.getClip();
@@ -47,7 +47,7 @@ public class ThePunishment {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			theme.loop(Clip.LOOP_CONTINUOUSLY);
+			theme.loop(Clip.LOOP_CONTINUOUSLY); // loops music for the whole game
 			try {
 				jpgImage = ImageIO.read(new File("Resource/searcher.jpg"));
 			} catch (IOException e) {
@@ -218,17 +218,17 @@ public class ThePunishment {
 										e.printStackTrace();
 									}
 									c.drawImage (jpgImage, 0, 100, c.getWidth(), 450, null);
-									counter = counter ++;
+									counter = counter ++; //next number in the array
 									c.println("You find a passage to a airvent which leads you back into prison.");
 									c.println("You see the same 3 items on the floor. Which do you choose?");
 									c.println("(Screwdriver/Set of keys/Sticky grenades)");
 									userItemTest = c.readLine();
-									i = 0;
+									i = 0; // to loop
 								}
 							}
 							else if (runAnswer.equalsIgnoreCase("Don't Run")){
 								c.clear();
-								i = 2;
+								i = 2; // to escape loop
 								try {
 									jpgImage = ImageIO.read(new File("Resource/prison.jpg"));
 								} catch (IOException e) {
@@ -367,7 +367,8 @@ public class ThePunishment {
 				}
 			}
 			c.println("Do you want to play again? (Yes/No)");
-			playAgain = c.readLine();}while(playAgain.equalsIgnoreCase("Yes"));
+			//Allows the user to play again
+			playAgain = c.readLine();}while(playAgain.equalsIgnoreCase("Yes")); 
 		while (!playAgain.equalsIgnoreCase("Yes") && !playAgain.equalsIgnoreCase("No")){
 			c.println("Try Again");
 			playAgain = c.readLine();
@@ -377,7 +378,7 @@ public class ThePunishment {
 		}
 	}
 }
-//Allows the user to play again
+
 
 
 
