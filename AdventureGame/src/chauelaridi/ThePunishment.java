@@ -227,7 +227,7 @@ public class ThePunishment {
 												}
 											else if (runAnswer.equalsIgnoreCase("Don't Run")){
 												c.clear();
-												i=2
+												i = 2;
 												try {
 													jpgImage = ImageIO.read(new File("Resource/prison.jpg"));
 												} catch (IOException e) {
