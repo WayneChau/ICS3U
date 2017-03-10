@@ -68,7 +68,7 @@ public class ThePunishment {
 				}
 				c.drawImage (jpgImage, 0, 160, c.getWidth(), 425, null);
 				c.println("Warning! Our system claims that " + usersName + " is listed as a criminal who commited a\ncrime recently.");
-				c.println("You spin the criminal wheel to discover your punishment");
+				c.println("You spin the criminal wheel to discover your punishment.");
 				c.println("The number you spun resulted in you being sent to prison.");
 				c.println("However, you're in luck. If you choose the right number, you have a chance to\nbe set free.");
 				c.println("Choose a number from 1 to 3");
@@ -252,7 +252,7 @@ public class ThePunishment {
 				}
 				c.drawImage (jpgImage, 0, 100, c.getWidth(), 450, null);
 				c.println("Warning! Our system claims that " + usersName + " is listed as a criminal who commited\na crime recently.");
-				c.println("You spin the criminal wheel to discover your punishment");
+				c.println("You spin the criminal wheel to discover your punishment.");
 				c.println("You have been sentence to execution.");
 			}
 			else if (randomNumber == 1 || randomNumber == 5 || randomNumber == 0){
@@ -344,7 +344,7 @@ public class ThePunishment {
 							c.println("As you feel acomplished, you step on the dead body as you move forward.");
 							c.println("However, you notice the dress on a glimpse of your eyesight. The dress triggers\npast memories.");
 							c.println("You turn around in shock as you realize it was your mother.");
-							c.println("As she was your only option of survival, you were left trapped with no methods\nof escaping the abandon building");
+							c.println("As she was your only option of survival, you were left trapped with no methods\nof escaping the abandon building.");
 						}
 						else {
 							c.clear();
@@ -357,7 +357,7 @@ public class ThePunishment {
 							c.drawImage (jpgImage, 0, 70, c.getWidth(), 450, null);
 							c.println("You were lucky you didn't attack it. It was your mother you love so dearly.");
 							c.println("Mother: I have spent countless of years searching for you. There is an escape route that I set up.");
-							c.println("Mother: Come over here");
+							c.println("Mother: Come over here.");
 							c.println("She leads you to the ladder by removing a heavy book shelf.");
 							c.println("Mother: Jump off the abandon building to get on the boat.");
 							c.println("Rumor said that the Bermuda Triangle has a portal to another universe.");
