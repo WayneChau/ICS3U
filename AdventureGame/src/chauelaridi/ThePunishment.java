@@ -34,9 +34,9 @@ public class ThePunishment {
 		int counter; // Stores number for the array
 		String userItemTest; // Test the input for the array
 		BufferedImage jpgImage = null; // stores image
-		c.setTextColor(Color.white);
-		c.setTextBackgroundColor(Color.black);
-		c.clear();
+		c.setTextColor(Color.white); //color of text turns white for whole program
+		c.setTextBackgroundColor(Color.black); //black background for whole program
+		c.clear(); //to allow the code above to be executed for the whole program
 		do{
 			c.clear();
 			Clip theme = null; // stores audio
@@ -143,7 +143,7 @@ public class ThePunishment {
 								}
 								if (doorAnswer == 1){
 									c.clear();
-									i = 2;
+									i = 2; // to escape loop
 									try {
 										jpgImage = ImageIO.read(new File("Resource/bag.jpg"));
 									} catch (IOException e) {
@@ -223,7 +223,7 @@ public class ThePunishment {
 									c.println("You see the same 3 items on the floor. Which do you choose?");
 									c.println("(Screwdriver/Set of keys/Sticky grenades)");
 									userItemTest = c.readLine();
-									i = 0; // to loop
+									i = 0; // to re-loop
 								}
 							}
 							else if (runAnswer.equalsIgnoreCase("Don't Run")){
