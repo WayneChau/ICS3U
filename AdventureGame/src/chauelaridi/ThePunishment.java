@@ -143,7 +143,7 @@ public class ThePunishment {
 								}
 								if (doorAnswer == 1){
 									c.clear();
-									i = 2;
+									i = 2; // to escape loop
 									try {
 										jpgImage = ImageIO.read(new File("Resource/bag.jpg"));
 									} catch (IOException e) {
@@ -183,7 +183,7 @@ public class ThePunishment {
 											c.println("As the grenade is a sticky grenade you couldn't get it off your hand.");
 											c.println("Due to that, you got exploded to death. Shame on you!");
 										}
-										else {
+										else if (itemUse.equalsIgnoreCase("Set of Keys")) {
 											c.clear();
 											try {
 												jpgImage = ImageIO.read(new File("Resource/freedom1.jpg"));
@@ -223,7 +223,7 @@ public class ThePunishment {
 									c.println("You see the same 3 items on the floor. Which do you choose?");
 									c.println("(Screwdriver/Set of keys/Sticky grenades)");
 									userItemTest = c.readLine();
-									i = 0; // to loop
+									i = 0; // to re-loop
 								}
 							}
 							else if (runAnswer.equalsIgnoreCase("Don't Run")){
