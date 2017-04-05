@@ -8,7 +8,6 @@ import java.util.Scanner;
  * This program finds the sum of the numbers that makes up the number within the number entered.
  * @author WayneChau 
  */
-
 public class SumDigits {
 	public static void main(String[]args){
 		Scanner s = new Scanner(System.in);
@@ -18,13 +17,12 @@ public class SumDigits {
 		System.out.println("The sum of the digits entered is: " + z);
 	}
 
-
+	/**
+	 * Method finds the sum of the numbers that makes up the number within the number given.
+	 *@param num Finding the sum of the numbers that makes up the number of the given number sum entered by the user.
+	 *@return sum The sum of the numbers that makes up the given number.
+	 */
 	public static int sumDigit (int num){
-		/**
-		 * Method finds the sum of the numbers that makes up the number within the number given.
-		 *@param num Finding the sum of the numbers that makes up the number of the given number sum entered by the user.
-		 *@return sum The sum of the numbers that makes up the given number.
-		 */
 		int sum = 0;
 		while(num>=1){
 			sum =sum + num%10;

@@ -34,9 +34,11 @@ public class ThePunishment {
 		int counter; // Stores number for the array
 		String userItemTest; // Test the input for the array
 		BufferedImage jpgImage = null; // stores image
-		c.setTextColor(Color.white);
-		c.setTextBackgroundColor(Color.black);
-		c.clear();
+
+		c.setTextColor(Color.white); //color of text turns white for whole program
+		c.setTextBackgroundColor(Color.black); //black background for whole program
+		c.clear(); //to allow the code above to be executed for the whole program
+
 		do{
 			c.clear();
 			Clip theme = null; // stores audio

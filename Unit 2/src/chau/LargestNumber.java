@@ -8,7 +8,6 @@ import java.util.Scanner;
  * This program finds the largest number of the numbers entered.
  * @author WayneChau 
  */
-
 public class LargestNumber {
 	public static void main(String[]args){
 		Scanner s = new Scanner(System.in);
@@ -23,12 +22,13 @@ public class LargestNumber {
 		int z = largestNum (num);
 		System.out.println("The largest number is: " + z);
 	}
+	
+	/**
+	 * Method finds the largest number of the numbers given.
+	 *@param [] num Finding the largest number of the given numbers entered by the user in an array.
+	 *@return x The largest number of the given numbers.
+	 */
 	public static int largestNum (int[]num){
-		/**
-		 * Method finds the largest number of the numbers given.
-		 *@param [] num Finding the largest number of the given numbers entered by the user in an array.
-		 *@return x The largest number of the given numbers.
-		 */
 		int x = num[0];
 		for (int i =1; i< num.length;i++){
 			x = Math.max(x, num[i]);
