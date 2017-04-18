@@ -37,4 +37,17 @@ public class IsPalindrome {
 		}
 		return false;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
