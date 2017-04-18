@@ -25,10 +25,6 @@ public class ReverseSentence {
 				} else {
 					System.out.print(sentence[i].charAt(j));
 				}
-				if(sentence[i].charAt(j) == '.' ){
-				
-					System.out.print('.');
-				}
 			}
 			System.out.print(" ");
 		}
