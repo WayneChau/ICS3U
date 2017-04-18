@@ -17,7 +17,6 @@ public class Factorial {
 		double z = factorial (x);
 		System.out.println("The factorial is: " + z);
 	}
-	
 	/**
 	 * Method finds the factorial of the number given.
 	 *@param x Finding the factorial of the given number given by the user.
