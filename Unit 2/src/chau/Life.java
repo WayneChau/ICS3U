@@ -3,8 +3,10 @@ package chau;
 import java.util.Scanner;
 
 /**
- * @author 323843193
- *
+ * Life.java
+ * Plays the game of life if it is alive, it needs 2 or 3 neighbors to stay alive. If it is dead it needs 3 neighbor to be alive.
+ * April 28, 2017
+ * @author Wayne Chau
  */
 public class Life {
 	public static void main(String[] args) {
