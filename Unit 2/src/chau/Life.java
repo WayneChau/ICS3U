@@ -11,7 +11,6 @@ public class Life {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please enter the number of living cells you wish to enter");
 		int livingCells = sc.nextInt();
-		int[][] newWorld = new int[20][20];
 		int[][] liveWorld = new int[20][20];
 		while (livingCells > 400) {
 			System.out.println("Please enter the number of living cells that is less than or equal to 400");
@@ -38,15 +37,20 @@ public class Life {
 			}
 		}
 		boolean nextDay = true;
+		int counter = 0;
+		int alive = livingCells;
 		for (int day = 1; nextDay == true; day++) {
-			for (int k = 0; k < 20; k++) {
-				for (int o = 0; o < 20; o++) {
-					newWorld[k][o] = 0;
+			int[][] newWorld = new int [20][20];
+			for(int i = 0; i < 20; i ++){
+				for(int k = 0; k < 20; k ++){
+					newWorld[i][k] = 0;
 				}
-				int counter = 0;
-				System.out.println("Do you want to want to continue to the next day? (True/False)");
-				nextDay = sc.nextBoolean();
+			}
+			counter = 0;
+			System.out.println("Do you want to want to continue to the next day? (True/False)");
+			nextDay = sc.nextBoolean();
 				for (int i = 0; i < liveWorld.length; i++) {
+					counter = 0;
 					for (int j = 0; j < liveWorld.length; j++) {
 						// check top outer layer
 						if (i == 0) {
@@ -68,8 +72,10 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 								// check left corner
@@ -89,8 +95,10 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 								if (j == 19) {
@@ -109,8 +117,10 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 							}
@@ -132,8 +142,10 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 								// check left corner
@@ -153,8 +165,10 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 								if (j == 19) {
@@ -173,8 +187,10 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 							}
@@ -212,8 +228,10 @@ public class Life {
 								}
 								if (counter != 2 || counter != 3) {
 									newWorld[i][j] = 0;
+									alive--;
 								} else if (counter == 2 || counter == 3) {
 									newWorld[i][j] = 1;
+									alive++;
 								}
 							}
 							if (liveWorld[i][j] == 0) {
@@ -246,8 +264,10 @@ public class Life {
 								}
 								if (counter != 3) {
 									newWorld[i][j] = 0;
+									alive--;
 								} else if (counter == 3) {
 									newWorld[i][j] = 1;
+									alive++;
 								}
 							}
 						}
@@ -271,8 +291,10 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 								if (j == 0) {
@@ -291,8 +313,10 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 								if (j == 19) {
@@ -311,8 +335,10 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 							}
@@ -334,8 +360,10 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 								if (j == 0) {
@@ -354,8 +382,10 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 								if (j == 19) {
@@ -374,8 +404,10 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 							}
@@ -399,8 +431,10 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 							}
@@ -421,8 +455,10 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 							}
@@ -446,8 +482,10 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
+										alive--;
 									} else if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 							}
@@ -467,26 +505,27 @@ public class Life {
 										counter++;
 									}
 									if (counter != 3) {
-										newWorld[i][j] = 0;
+										 newWorld[i][j] = 0;
+										 alive--;
 									} else if (counter == 3) {
 										newWorld[i][j] = 1;
+										alive++;
 									}
 								}
 							}
 						}
-					}
-					liveWorld = newWorld;
-					for (int x = 0; x < 20; x++) {
-						for (int y = 0; y < 20; y++) {
-							System.out.print(newWorld[x][y]);
-							if (y == 19) {
-								System.out.println(newWorld[x][y]);
-							}
+					}	
+				}
+				liveWorld = newWorld;
+				for (int i = 0; i < liveWorld.length; i++) {
+					for (int j = 0; j < liveWorld.length; j++) {
+						System.out.print(liveWorld[i][j]);
+						if (j == 19) {
+							System.out.println(liveWorld[i][j]);
 						}
 					}
 				}
-
 			}
 		}
 	}
-}
+
