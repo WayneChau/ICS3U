@@ -75,7 +75,8 @@ public class Life {
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 2 || counter == 3) {
+									}
+									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -98,7 +99,8 @@ public class Life {
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 2 || counter == 3) {
+									}
+									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -120,7 +122,8 @@ public class Life {
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 2 || counter == 3) {
+									}
+									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -145,7 +148,8 @@ public class Life {
 									if (counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 3) {
+									}
+									if (counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -168,7 +172,8 @@ public class Life {
 									if (counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 3) {
+									}
+									if (counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -190,7 +195,8 @@ public class Life {
 									if (counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 3) {
+									}
+									if (counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -231,7 +237,8 @@ public class Life {
 								if (counter != 2 || counter != 3) {
 									newWorld[i][j] = 0;
 									alive--;
-								} else if (counter == 2 || counter == 3) {
+								}
+								if (counter == 2 || counter == 3) {
 									newWorld[i][j] = 1;
 									alive++;
 								}
@@ -267,7 +274,8 @@ public class Life {
 								if (counter != 3) {
 									newWorld[i][j] = 0;
 									alive--;
-								} else if (counter == 3) {
+								}
+								if (counter == 3) {
 									newWorld[i][j] = 1;
 									alive++;
 								}
@@ -294,7 +302,8 @@ public class Life {
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 2 || counter == 3) {
+									} 
+									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -316,7 +325,8 @@ public class Life {
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 2 || counter == 3) {
+									}
+									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -338,7 +348,8 @@ public class Life {
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 2 || counter == 3) {
+									}
+									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -363,7 +374,8 @@ public class Life {
 									if (counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 3) {
+									}
+									if (counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -385,7 +397,8 @@ public class Life {
 									if (counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 3) {
+									}
+									if (counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -407,7 +420,8 @@ public class Life {
 									if (counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 3) {
+									}
+									if (counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -434,7 +448,8 @@ public class Life {
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 2 || counter == 3) {
+									}
+									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -458,7 +473,8 @@ public class Life {
 									if (counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 3) {
+									}
+									if (counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -485,7 +501,8 @@ public class Life {
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
 										alive--;
-									} else if (counter == 2 || counter == 3) {
+									}
+									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
@@ -509,7 +526,8 @@ public class Life {
 									if (counter != 3) {
 										 newWorld[i][j] = 0;
 										 alive--;
-									} else if (counter == 3) {
+									}
+									if (counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
 									}
