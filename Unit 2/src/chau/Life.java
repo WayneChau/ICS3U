@@ -17,12 +17,12 @@ public class Life {
 			livingCells = sc.nextInt();
 		}
 		for (int i = 0; i < livingCells; i++) {
-			System.out.println("Please enter the coordinates in rows followed by columns (X Y)");
+			System.out.println("Please enter the coordinates in rows followed by columns seperated by a space.(X Y)");
 			int rowCell = sc.nextInt();
 			int columnCell = sc.nextInt();
 			while (rowCell >= 20 || columnCell >= 20) {
 				System.out.println(
-						"Life World is a 20 by 20 grid. Please enter the coordinates from 0-19 for x and y (X Y)");
+						"Life World is a 20 by 20 grid. Please enter the coordinates from 0-19 for x and y seperated by a space. (X Y)");
 				rowCell = sc.nextInt();
 				columnCell = sc.nextInt();
 			}
