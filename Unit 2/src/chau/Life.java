@@ -3,8 +3,8 @@ package chau;
 import java.util.Scanner;
 
 /**
- * Life.java
- * Plays the game of life if it is alive, it needs 2 or 3 neighbors to stay alive. If it is dead it needs 3 neighbor to be alive.
+ * Life.java 
+ * Plays the game of life if it is alive, it needs 2 or 3 neighbors to stay alive. If it is dead it needs 3 neighbor to be alive. 
  * April 28, 2017
  * @author Wayne Chau
  */
@@ -34,23 +34,25 @@ public class Life {
 			for (int j = 0; j < liveWorld.length; j++) {
 				System.out.print(liveWorld[i][j]);
 				if (j == 19) {
-					System.out.println(liveWorld[i][j]);
+					System.out.println();
 				}
 			}
 		}
 		boolean nextDay = true;
 		int counter = 0;
-		int alive = livingCells;
+		int alive;
 		for (int day = 1; nextDay == true; day++) {
-			int[][] newWorld = new int [20][20];
-			for(int i = 0; i < 20; i ++){
-				for(int k = 0; k < 20; k ++){
+			alive = 0;
+			int[][] newWorld = new int[20][20];
+			for (int i = 0; i < 20; i++) {
+				for (int k = 0; k < 20; k++) {
 					newWorld[i][k] = 0;
 				}
 			}
 			counter = 0;
 			System.out.println("Do you want to want to continue to the next day? (True/False)");
 			nextDay = sc.nextBoolean();
+			if (nextDay == true){
 				for (int i = 0; i < liveWorld.length; i++) {
 					counter = 0;
 					for (int j = 0; j < liveWorld.length; j++) {
@@ -72,9 +74,17 @@ public class Life {
 									if (liveWorld[i + 1][j + 1] == 1) {
 										counter++;
 									}
+									// right
+									if (liveWorld[i][j + 1] == 1) {
+										counter++;
+									}
+									// left
+									if (liveWorld[i][j - 1] == 1) {
+										counter++;
+									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
@@ -98,7 +108,7 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
@@ -121,7 +131,7 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
@@ -145,9 +155,17 @@ public class Life {
 									if (liveWorld[i + 1][j + 1] == 1) {
 										counter++;
 									}
+									// right
+									if (liveWorld[i][j + 1] == 1) {
+										counter++;
+									}
+									// left
+									if (liveWorld[i][j - 1] == 1) {
+										counter++;
+									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 3) {
 										newWorld[i][j] = 1;
@@ -171,7 +189,7 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 3) {
 										newWorld[i][j] = 1;
@@ -194,7 +212,7 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 3) {
 										newWorld[i][j] = 1;
@@ -236,7 +254,7 @@ public class Life {
 								}
 								if (counter != 2 || counter != 3) {
 									newWorld[i][j] = 0;
-									alive--;
+
 								}
 								if (counter == 2 || counter == 3) {
 									newWorld[i][j] = 1;
@@ -273,7 +291,7 @@ public class Life {
 								}
 								if (counter != 3) {
 									newWorld[i][j] = 0;
-									alive--;
+
 								}
 								if (counter == 3) {
 									newWorld[i][j] = 1;
@@ -299,10 +317,18 @@ public class Life {
 									if (liveWorld[i - 1][j + 1] == 1) {
 										counter++;
 									}
+									// right
+									if (liveWorld[i][j + 1] == 1) {
+										counter++;
+									}
+									// left
+									if (liveWorld[i][j - 1] == 1) {
+										counter++;
+									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
-									} 
+
+									}
 									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
 										alive++;
@@ -324,7 +350,7 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
@@ -347,7 +373,7 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
@@ -371,9 +397,17 @@ public class Life {
 									if (liveWorld[i - 1][j + 1] == 1) {
 										counter++;
 									}
+									// right
+									if (liveWorld[i][j + 1] == 1) {
+										counter++;
+									}
+									// left
+									if (liveWorld[i][j - 1] == 1) {
+										counter++;
+									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 3) {
 										newWorld[i][j] = 1;
@@ -396,7 +430,7 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 3) {
 										newWorld[i][j] = 1;
@@ -419,7 +453,7 @@ public class Life {
 									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 3) {
 										newWorld[i][j] = 1;
@@ -445,9 +479,17 @@ public class Life {
 									if (liveWorld[i + 1][j + 1] == 1) {
 										counter++;
 									}
+									// bottom
+									if (liveWorld[i + 1][j] == 1) {
+										counter++;
+									}
+									// top
+									if (liveWorld[i - 1][j] == 1) {
+										counter++;
+									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
@@ -470,9 +512,17 @@ public class Life {
 									if (liveWorld[i + 1][j + 1] == 1) {
 										counter++;
 									}
+									// bottom
+									if (liveWorld[i + 1][j] == 1) {
+										counter++;
+									}
+									// top
+									if (liveWorld[i - 1][j] == 1) {
+										counter++;
+									}
 									if (counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 3) {
 										newWorld[i][j] = 1;
@@ -490,6 +540,14 @@ public class Life {
 									if (liveWorld[i][j - 1] == 1) {
 										counter++;
 									}
+									// bottom
+									if (liveWorld[i + 1][j] == 1) {
+										counter++;
+									}
+									// top
+									if (liveWorld[i - 1][j] == 1) {
+										counter++;
+									}
 									// top left
 									if (liveWorld[i - 1][j - 1] == 1) {
 										counter++;
@@ -500,7 +558,7 @@ public class Life {
 									}
 									if (counter != 2 || counter != 3) {
 										newWorld[i][j] = 0;
-										alive--;
+
 									}
 									if (counter == 2 || counter == 3) {
 										newWorld[i][j] = 1;
@@ -515,6 +573,14 @@ public class Life {
 									if (liveWorld[i][j - 1] == 1) {
 										counter++;
 									}
+									// bottom
+									if (liveWorld[i + 1][j] == 1) {
+										counter++;
+									}
+									// top
+									if (liveWorld[i - 1][j] == 1) {
+										counter++;
+									}
 									// top left
 									if (liveWorld[i - 1][j - 1] == 1) {
 										counter++;
@@ -524,8 +590,8 @@ public class Life {
 										counter++;
 									}
 									if (counter != 3) {
-										 newWorld[i][j] = 0;
-										 alive--;
+										newWorld[i][j] = 0;
+
 									}
 									if (counter == 3) {
 										newWorld[i][j] = 1;
@@ -534,18 +600,22 @@ public class Life {
 								}
 							}
 						}
-					}	
+					}
 				}
 				liveWorld = newWorld;
 				for (int i = 0; i < liveWorld.length; i++) {
 					for (int j = 0; j < liveWorld.length; j++) {
 						System.out.print(liveWorld[i][j]);
 						if (j == 19) {
-							System.out.println(liveWorld[i][j]);
+							System.out.println();
 						}
 					}
+				}
+				if (alive == 0){
+					System.out.println("All living cells have died in live world.");
+					nextDay = false;
 				}
 			}
 		}
 	}
-
+}
