@@ -42,7 +42,9 @@ public class LightSens implements Behavior {
 		if (bool == true && !suppressed) {
 			Motor.B.forward();
 			Motor.C.forward();
+			Delay.msDelay(2000);
 			pickupBalls();
+			Delay.msDelay(1000);
 			placeLightBin();
 			Thread.yield();
 		}
@@ -60,17 +62,15 @@ public class LightSens implements Behavior {
 	 * @Return N/A
 	 */
 	public static void pickupBalls() {
-		//position the claw to the ball
+		//positions the claw to the ball
 		Motor.B.stop();
-		Motor.C.rotate(180);
-		Motor.C.stop();
+		Motor.C.rotate(150);
 		Delay.msDelay(1000);
-		//allows the claw to grab the ball
+		// allows claw to grab the ball
 		Motor.B.rotate(25, true);
 		Motor.C.rotate(25, true);
 		Motor.A.rotateTo(-155);
 		Motor.A.stop();
-		Delay.msDelay(5000);
 	}
 	
 	/**
@@ -80,7 +80,7 @@ public class LightSens implements Behavior {
 	 */
 	public static void placeLightBin() {
 		Motor.C.stop();
-		Motor.B.rotate(-360);
+		Motor.B.rotate(-170);
 		Motor.B.stop();
 		Motor.B.forward();
 		Motor.C.forward();

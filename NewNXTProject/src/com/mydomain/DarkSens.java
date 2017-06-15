@@ -37,9 +37,9 @@ public class DarkSens implements Behavior {
 			bool2 = true;
 		}
 		if (bool2 == true && !suppressed) { //positions the claw to grab the ball
-			Motor.B.backward();
-			Motor.C.backward();
-			Delay.msDelay(400);
+			Motor.B.forward();
+			Motor.C.forward();
+			Delay.msDelay(500);
 			pickupBalls();
 			placeDarkBin();
 			Thread.yield();
