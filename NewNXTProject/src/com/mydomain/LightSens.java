@@ -19,6 +19,11 @@ public class LightSens implements Behavior {
 		this.light = ls;
 	}
 
+	/**
+	 * when on light value greater than 30, the action method will trigger
+	 * @param N/A
+	 * @return true, false - triggers the action method
+	 */
 	@Override
 	public boolean takeControl() {
 		if (light.getLightValue() > 30) {
@@ -28,8 +33,14 @@ public class LightSens implements Behavior {
 	}
 
 	@Override
+	
+	/**
+	 * Based on light value greater than 30, the methods will be executed for light balls
+	 * @param N/A
+	 * @return N/A
+	 */
 	public void action() {
-		// based on light value greater than 30, the methods will be executed for light balls
+		
 		suppressed = false;
 		if (!suppressed) {
 			pickupBalls();
@@ -39,7 +50,12 @@ public class LightSens implements Behavior {
 		}
 
 	}
-
+	
+	/**
+	 * Robot calls this method to suppress the program
+	 * @param N/A
+	 * @return N/A
+	 */
 	@Override
 	public void suppress() {
 		suppressed = true;
@@ -47,8 +63,8 @@ public class LightSens implements Behavior {
 
 	/**
 	 * Picks up Light Balls
-	 * @Param N/A
-	 * @Return N/A
+	 * @param N/A
+	 * @return N/A
 	 */
 	public static void pickupBalls() {
 		// positions the claw to the ball
@@ -65,8 +81,8 @@ public class LightSens implements Behavior {
 
 	/**
 	 * Place Light Balls in the Light Bin
-	 * @Param N/A
-	 * @Return N/A
+	 * @param N/A
+	 * @return N/A
 	 */
 	public static void placeLightBin() {
 		Motor.C.stop();
@@ -80,8 +96,8 @@ public class LightSens implements Behavior {
 
 	/**
 	 * Rotates back towards the pile of Balls
-	 * @Param N/A
-	 * @Return N/A
+	 * @param N/A
+	 * @return N/A
 	 */
 	public static void rotateAround() {
 		Motor.C.stop();

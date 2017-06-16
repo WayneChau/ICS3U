@@ -21,6 +21,12 @@ public class DarkSens implements Behavior {
 	}
 	
 	@Override
+	
+	/**
+	 * Based on light value less than 20, the methods will be executed for dark balls
+	 * @param N/A
+	 * @return true, false - if the dark balls method will be executed
+	 */
 	public boolean takeControl() {
 		if (light.getLightValue() < 20 ) {
 			return true;
@@ -29,6 +35,12 @@ public class DarkSens implements Behavior {
 	}
 
 	@Override
+	
+	/**
+	 * Methods are executed for dark balls to pick up and place in bins
+	 * @param N/A
+	 * @return N/A
+	 */
 	public void action() {
 		suppressed = false;
 		light.getLightValue();
@@ -42,6 +54,11 @@ public class DarkSens implements Behavior {
 
 	}
 
+	/**
+	 * Robot calls this method to suppress the program
+	 * @param N/A
+	 * @return N/A
+	 */
 	@Override
 	public void suppress() {
 		suppressed = true;

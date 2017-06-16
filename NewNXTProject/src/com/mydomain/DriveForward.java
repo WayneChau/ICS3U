@@ -15,10 +15,22 @@ public class DriveForward implements Behavior{
 	private boolean suppressed; //end program
 	
 	@Override
+	
+	/**
+	 * Always true to drive forward
+	 * @param N/A
+	 * @return true - moves forward if no behavior is met
+	 */
 	public boolean takeControl() {
 		return true;
 	}
 	@Override
+	
+	/**
+	 * Moves Robot Forward, stops if suppressed
+	 * @param N/A
+	 * @return N/A
+	 */
 	public void action() {
 		suppressed = false;
 		Motor.B.forward();
@@ -30,6 +42,11 @@ public class DriveForward implements Behavior{
 		Motor.C.stop();
 	}
 
+	/**
+	 * Robot calls this method to suppress the program
+	 * @param N/A
+	 * @return N/A
+	 */
 	@Override
 	public void suppress() {
 		suppressed = true;

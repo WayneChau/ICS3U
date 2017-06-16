@@ -11,6 +11,11 @@ import lejos.robotics.subsumption.Behavior;
  */
 public class EndProgram implements Behavior{
 	@Override
+	/**
+	 * Escape button triggers the suppress and action when pressed
+	 * @param N/A
+	 * @return true, false - triggers the suppress and action methods
+	 */
 	public boolean takeControl() {
 		if (Button.ESCAPE.isDown()){ //Escape button ends program
 			return true;
@@ -18,11 +23,21 @@ public class EndProgram implements Behavior{
 		return false;
 	}
 
+	/**
+	 * Robot exits to the main screen
+	 * @param N/A
+	 * @return N/A
+	 */
 	@Override
 	public void action() {
 		System.exit(0);
 	}
 
+	/**
+	 * Robot calls this method to suppress the program
+	 * @param N/A
+	 * @return N/A
+	 */
 	@Override
 	public void suppress() {
 	}
