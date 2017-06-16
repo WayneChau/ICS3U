@@ -15,7 +15,6 @@ import lejos.util.Delay;
 public class DarkSens implements Behavior {
 	private LightSensor light;
 	private boolean suppressed; //ends program
-	private boolean bool2; //cause actions to be implemented
 
 	public DarkSens(LightSensor ls){
 		this.light = ls;
@@ -23,7 +22,7 @@ public class DarkSens implements Behavior {
 	
 	@Override
 	public boolean takeControl() {
-		if (light.getLightValue() > 20) {
+		if (light.getLightValue() < 20 ) {
 			return true;
 		}
 		return false;
@@ -33,14 +32,10 @@ public class DarkSens implements Behavior {
 	public void action() {
 		suppressed = false;
 		light.getLightValue();
-		if (light.getLightValue() > 20 && !suppressed) { 
-			bool2 = true;
-		}
-		if (bool2 == true && !suppressed) { //positions the claw to grab the ball
-			Motor.B.forward();
-			Motor.C.forward();
-			Delay.msDelay(500);
+		if (!suppressed) { 
+			//execute methods
 			pickupBalls();
+			Delay.msDelay(1000);
 			placeDarkBin();
 			Thread.yield();
 		}
@@ -60,12 +55,13 @@ public class DarkSens implements Behavior {
 	public static void pickupBalls() {
 		//positions the claw to the ball
 		Motor.B.stop();
-		Motor.C.rotate(220);
-		Delay.msDelay(600);
+		Motor.C.rotate(165);
+		Motor.C.stop();
+		Delay.msDelay(1000);
 		//allows claw to grab the ball
-		Motor.B.rotate(200, true);
-		Motor.C.rotate(200, true);
-		Motor.A.rotateTo(-125);
+		Motor.B.rotate(25, true);
+		Motor.C.rotate(25, true);
+		Motor.A.rotateTo(-155);
 		Motor.A.stop();
 	}
 
@@ -76,11 +72,12 @@ public class DarkSens implements Behavior {
 	 */
 	public static void placeDarkBin() {
 		Motor.C.stop();
-		Motor.B.rotate(300);
+		Motor.C.rotate(-165); //position to starting position
+		Motor.B.rotate(360); //position to bin line
 		Motor.B.forward();
 		Motor.C.forward();
-		Delay.msDelay(5000);
-		Motor.A.rotate(105);
+		Delay.msDelay(2000);
+		Motor.A.rotate(155);
 	}
 
 	/**
@@ -90,9 +87,10 @@ public class DarkSens implements Behavior {
 	 */
 	public static void rotateAround() {
 		Motor.C.stop();
-		Motor.B.rotate(720);
+		Motor.B.rotate(720); //rotates 180 degrees
 		Motor.C.forward();
 		Motor.B.forward();
-		Delay.msDelay(5000);
+		Motor.C.rotate(360); //position towards pile of balls
+		Delay.msDelay(2000);
 	}
 }
